@@ -38,3 +38,34 @@ console.log("Hellow World");
 }
 
 console.log(typeof heros);
+
+
+///+++++++++++++++++++++++++++++++++++
+//Memory
+
+
+// stack(Primitive):the variable declared inside this is given as a copy to the user
+// Heap(Non-Primitive): the reference of the variable is given to the user
+
+
+let myNickname = "Raman"
+
+let anothername = "Ravan"
+anothername = "Chai aur Code"
+
+console.log(myNickname);
+console.log(anothername);
+
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl"
+
+}
+
+let userTwo = userOne
+ userTwo.email = "Khem98397@gmail.com"
+
+ console.log(userOne);
+ console.log(userTwo);
+ 
+ 
