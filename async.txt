@@ -1,0 +1,16 @@
+JavaScript: Synchronous and Single Thread
+
+Execution Context 
+execute one line of code at a time
+console log 1
+console log 1
+
+call stack           memory stack
+
+Blocking Code                Vs                  Non Blocking Code
+Block the flow of Program                        Do not Block Execution
+Read File Sync                                   Read File Async
+
+JS Engine made up of memory heap and call stack. JS engine is single threded 
+Web API is in inside the browser means dom access. 
+Task Queue  
