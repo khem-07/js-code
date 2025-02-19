@@ -1,0 +1,8 @@
+response = fetch(something)
+
+1. data:---                           2. Web Browser/node
+onfulFilled[]  //resolve                  network reques
+onRejection[]                             accept --> onfulfilled reject ---> on Rejection
+
+Global Memory
+response: ---> data(which is not directly accessed)
