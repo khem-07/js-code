@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.section {
+    min-height: 100vh;
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 36px;
+    color: #e63946;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.accordion {
+    max-width: 700px;
+    margin: auto;
+}
+
+.accordion_item {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.accordion_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #e63946;
+    color: white;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+}
+
+.accordion_title:hover {
+    background: #c53030;
+}
+
+.accordion_title h3 {
+    flex: 1;
+    font-size: 20px;
+}
+
+.accordion_title i {
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Smooth Expand Animation */
+.accordion_content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, opacity 0.3s ease-out;
+    padding: 0 20px;
+    background: #fff5e1;
+    line-height: 1.6;
+    border-top: 1px solid #e63946;
+}
+
+/* Active Styles */
+.accordion_item.active {
+    background: #ffeecc;
+}
+
+.accordion_title.active {
+    background: #c53030;
+}
+
+.accordion_title.active i {
+    transform: rotate(180deg);
+}
+
+/* Expand content when active */
+.accordion_content.active {
+    max-height: 200px; /* Set a large value to accommodate content */
+    opacity: 1;
+    padding: 15px 20px;
+}
+dw
