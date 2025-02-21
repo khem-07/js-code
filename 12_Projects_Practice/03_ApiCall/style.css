@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+body {
+    padding: 15px;
+    font-family: Arial, sans-serif; /* Added a fallback font */
+    background-color: #f0f0f0; /* Light gray background */
+}
+
+h1 {
+    font-size: 40px; /* Adjusted font size */
+    margin-bottom: 30px;
+    color: #333; /* Darkened the heading color */
+}
+
+.posts-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #ff6347; /* Coral border */
+    padding: 15px; /* Increased padding for better spacing */
+    background-color: #000001; /* Medium slate blue background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.post-item h3 {
+    color: #fff; /* White text */
+    font-size: 24px; /* Larger font size */
+    margin: 0; /* Removed margin to align with padding */
+}
+
+.post-item p {
+    font-size: 18px;
+    color: #f0f0f0; /* Slightly off-white text */
+    margin: 0; /* Removed margin for cleaner look */
+}
