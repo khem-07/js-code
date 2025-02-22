@@ -1,0 +1,112 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+body{
+    text-align: center;
+    background-color: rgb(147, 205, 255);
+}
+h1{
+    font-size: 50px;
+    color: rgb(1, 42, 9);
+    margin-bottom: 40px;
+}
+.button-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.button-wrapper button{
+    border: none;
+    padding: 12px 20px;
+    background-color: rgb(8, 8, 107);
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+
+.button-wrapper button.active{
+    background-color: black;
+
+}
+.content{
+    display: none;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: 50px;
+}
+
+.content.active{
+    display: block;
+}
+ */
+/* General Styles */
+body {
+    font-family: cursive;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+/* Tab Buttons */
+.button-wrapper {
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    font-family: cursive;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.tab-button:hover {
+    background: linear-gradient(45deg, #2575fc, #6a11cb);
+    transform: scale(1.05);
+}
+
+.tab-button.active {
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+}
+
+/* Tab Content */
+.content-wrapper {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+}
+
+.content {
+    display: none;
+    font-size: 18px;
+    color: #444;
+}
+
+.content.active {
+    display: block;
+    color: #222;
+    font-weight: bold;
+}
+
+/* Optional: Smooth fade-in effect for content */
+.content-wrapper .content {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.content-wrapper .content.active {
+    opacity: 1;
+}
