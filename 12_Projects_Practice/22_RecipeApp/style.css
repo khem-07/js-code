@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', cursive, sans-serif; /* Modern font with fallback */
+}
+
+body {
+    padding: 25px;
+    background: linear-gradient(135deg, #f3e7ff 0%, #d1c4e9 100%); /* Subtle violet background gradient */
+    min-height: 100vh;
+}
+
+h1 {
+  margin-bottom: 40px;
+  text-align: center;
+  color: #4600f1;
+  background-color: white; /* Ensures readability if background changes */
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensures it stays above other elements */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for better visibility */
+
+    margin-bottom: 50px;
+    text-align: center;
+    color: #4a00e0; /* Deep violet for heading */
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 4px rgba(74, 0, 224, 0.2); /* Violet-tinted shadow */
+}
+
+.recipe-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.recipe-list .recipe-item {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 25px;
+    color: #ffffff;
+    background: linear-gradient(145deg, #ae51ff 0%, #05010e 100%);
+     /* Violet gradient */
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(74, 0, 224, 0.25); /* Violet shadow */
+    transition: all 0.4s ease;
+    border: none;
+}
+
+.recipe-list .recipe-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 35px rgba(74, 0, 224, 0.35); /* Enhanced violet shadow on hover */
+}
+
+.recipe-list .recipe-item .recipe-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.recipe-list .recipe-item:hover .recipe-image {
+    transform: scale(1.05);
+}
+
+.recipe-list .recipe-item .recipe-name {
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+}
+
+.recipe-list .recipe-item .recipe-cuisine {
+    font-size: 16px;
+    color: #e6d9ff; /* Light violet for contrast */
+    text-align: center;
+    font-style: italic;
+}
+
+.recipe-list .recipe-item .recipe-ingredients {
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    color: #e0d6ff; /* Softer violet shade */
+    line-height: 1.5;
+}
+
+.recipe-list .recipe-item .recipe-meal-type,
+.recipe-list .recipe-item .recipe-rating {
+    font-size: 18px;
+    color: #ffffff;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15); /* Subtle white overlay for contrast */
+    padding: 5px 10px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.recipe-list .recipe-item .recipe-details-button {
+    align-self: center;
+    padding: 12px 25px;
+    border: none;
+    font-size: 16px;
+    background: #b721ff; /* Bright violet button */
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(183, 33, 255, 0.4); /* Violet button shadow */
+}
+
+.recipe-list .recipe-item .recipe-details-button:hover {
+    background: #d476ff; /* Lighter violet on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(183, 33, 255, 0.6);
+}
+
+.loader {
+    display: none;
+}
+
+.recipe-list.hide {
+    display: none;
+}
+
+.loader.show {
+    display: block;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    border-top: 4px solid #c776ed; /* Matches violet button */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: animateLoader 1.2s linear infinite;
+}
+
+@keyframes animateLoader {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
